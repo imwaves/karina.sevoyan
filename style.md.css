@@ -1,7 +1,7 @@
 @media (min-width: 720px) {
 
 :root {
-  --page-pad: var(--m8);
+  --page-pad-h: var(--m8);
 }
 
 .Section {
