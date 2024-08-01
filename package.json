@@ -1,0 +1,21 @@
+{
+  "name": "karina",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lightningcss": "^1.25.1",
+    "vite": "^5.3.5",
+    "vite-plugin-static-copy": "^1.0.6"
+  },
+  "dependencies": {
+    "postcss-nesting": "^12.1.5"
+  }
+}

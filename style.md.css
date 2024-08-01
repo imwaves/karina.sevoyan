@@ -1,0 +1,42 @@
+@media (min-width: 720px) {
+
+:root {
+  --page-pad: var(--m8);
+}
+
+.Section {
+  max-width: 1280px;
+  max-height: 920px;
+}
+
+.About {
+  flex-direction: row;
+}
+
+.Pic {
+  img {
+    width: 100%;
+    margin: initial;
+  }
+
+  .__serial {
+    flex-basis: 100%;
+  }
+}
+
+.Pic.--full-w {
+  flex-direction: row;
+  gap: var(--m6);
+
+  figcaption { order: -1 }
+}
+
+.TriplePic {
+  flex-direction: row;
+}
+
+.Section .Pic:nth-child(1) {
+  margin-top: initial;
+}
+
+}
