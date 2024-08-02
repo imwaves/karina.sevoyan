@@ -31,12 +31,14 @@
   figcaption { order: -1 }
 }
 
-.TriplePic {
-  flex-direction: row;
-}
-
 .Section .Pic:nth-child(1) {
   margin-top: initial;
 }
 
+}
+
+@media (min-width: 900px) {
+  .TriplePic {
+    flex-direction: row;
+  }
 }
