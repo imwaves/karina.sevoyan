@@ -1,3 +1,11 @@
+@font-face {
+  font-display: swap;
+  font-family: Films;
+  src: url("assets/file.woff2") format("woff2"),
+      url("assets/file.woff") format("woff"),
+      url("assets/file.ttf") format("ttf");
+}
+
 html {
   /* background: var(--black80); */
   background: white;
@@ -18,7 +26,7 @@ body {
 }
 body, button {
   /* font-family: sans-serif; */
-  /* font-family: wf_b187a8f49b87455b87939a2c2; */
+  /* font-family: Films; */
   font-family: "Fira Sans Condensed";
   letter-spacing: .05em;
   font-weight: 300;
@@ -26,7 +34,7 @@ body, button {
 
 .Name,
 nav {
-  font-family: wf_b187a8f49b87455b87939a2c2;
+  font-family: Films;
   letter-spacing: .2em;
 }
 
@@ -77,10 +85,18 @@ nav {
   .__bg {
     position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: -2;
     background: url(assets/pics/preview/IMG_2700.jpg);
     background-size: cover;
-    opacity: .1;
+/*    opacity: 1;*/
+  }
+
+  .__bg-grad {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(0deg, rgba(255,255,255,0.9) 30%, rgba(255,255,255,0) 80%);
+    opacity: 1;
   }
 
   /* &:last-child { filter: invert(1); } */
@@ -239,14 +255,6 @@ button.Btn--buy {
 }
 
 .Name {
-  position: fixed;
-  top: 128px;
-  left: 0;
-  z-index: 12;
-
-  width: 100vw;
-  padding: var(--m4) var(--page-pad-h);
-
   font-size: var(--m6);
   font-weight: 200;
   /* text-transform: uppercase; */
@@ -256,10 +264,29 @@ button.Btn--buy {
   backdrop-filter: blur(10px);
 
   a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
+  }
+
+  &header {
+    position: absolute;
+    top: 50vh;
+    left: 0;
+    z-index: 12;
+
+    width: 100vw;
+    padding: var(--m4) var(--page-pad-h);
+
+    a {
+      display: block;
+      max-width: 1152px;
+      margin: 0 auto;
+/*      padding-left: var(--page-pad-h);*/
+    }
   }
 }
+
+
 
 .Page__anchor {
   position: absolute;
