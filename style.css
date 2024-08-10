@@ -22,6 +22,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: sans-serif;
   /* gap: var(--m4); */
 }
 body, button {
@@ -86,8 +87,9 @@ nav {
     position: absolute;
     inset: 0;
     z-index: -2;
-    background: url(assets/pics/preview/IMG_2700.jpg);
+    background: url(assets/pics/preview/IMG_7310.jpg);
     background-size: cover;
+    background-position: center;
 /*    opacity: 1;*/
   }
 
@@ -105,7 +107,7 @@ nav {
 .__contacts {
   font-size: var(--m4);
   white-space: pre-line;
-  text-transform: uppercase;
+/*  text-transform: uppercase;*/
 
   a {
     text-decoration: none;
@@ -117,6 +119,8 @@ nav {
   display: flex;
   flex-direction: column;
   gap: var(--m8);
+
+  font-size: var(--m4);
 
   > article {
     display: flex;
@@ -151,6 +155,7 @@ nav {
   img {
     max-height: 85vh;
     width: 100%;
+    height: 100%;
 
     object-fit: contain;
     object-position: center;
@@ -176,8 +181,20 @@ nav {
       margin-top: var(--m4);
     }
 
+    .__desc {
+      margin: var(--m6) 0;
+    }
+
     > * { display: block }
   }
+}
+
+.About,
+.__contacts,
+.Pic figcaption {
+  font-family: sans-serif;
+  line-height: 145%;
+  letter-spacing: 0.5px;
 }
 
 @media (max-width: 719px) {
@@ -286,7 +303,7 @@ button.Btn--buy {
   }
 }
 
-
+.d-flex__space { flex-grow: 9999 }
 
 .Page__anchor {
   position: absolute;

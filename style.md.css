@@ -6,11 +6,17 @@
 
 .Section {
   max-width: 1280px;
-  max-height: 920px;
+  min-height: 100vh;
 }
 
 .About {
   flex-direction: row;
+
+  img {
+    max-width: 50%;
+
+    object-fit: contain;
+  }
 }
 
 .Pic {
@@ -19,8 +25,8 @@
     margin: initial;
   }
 
-  .__serial {
-    flex-basis: 100%;
+  figcaption {
+    max-width: 280px;
   }
 }
 
