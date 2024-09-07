@@ -15,6 +15,14 @@ export default defineConfig(({ command, mode }) => {
           {
             src: 'assets/pics/orig',
             dest: 'assets/pics/',
+          },
+          // {
+          //   src: 'CNAME',
+          //   dest: '.',
+          // }
+          {
+            src: 'mail.php',
+            dest: '.',
           }
         ]
       })

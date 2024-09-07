@@ -33,3 +33,45 @@ function scrollByHash () {
     }, 300);
   }
 }
+
+const $contactForm = document.querySelector('.ContactForm');
+
+$contactForm.addEventListener('submit', event => {
+  console.log(event);
+  event.preventDefault();
+
+  fetch('/mail.php', {
+    method: 'POST',
+    body: new FormData($contactForm),
+  }).then(res => res.text())
+    .then(text => {
+      if (!text)
+        $contactForm.classList.add('--success');
+      else
+        alert(`Error:\n${text}`);
+    })
+});
+
+// window.handleBuyClick = (picName) => {
+//   $contactForm.querySelector('.__pic').classList.remove('--empty');
+//   $contactForm.querySelector('[name="pic"]').value = picName;
+//   $contactForm.querySelector('[name="email"]').focus();
+// };
+
+document.addEventListener('click', e => {
+  if (e.target.matches('button[name="buy-pic"]'))
+    handleBuyPic(e);
+});
+
+function handleBuyPic (e) {
+  let $el = e.target;
+  while ($el = $el.parentNode) {
+    if ($el.matches('.Pic')) {
+      const picName = $el.querySelector('.__name').textContent;
+      $contactForm.querySelector('.__pic').classList.remove('--empty');
+      $contactForm.querySelector('[name="pic"]').value = picName;
+      $contactForm.querySelector('[name="email"]').focus();
+      return;
+    }
+  }
+}
